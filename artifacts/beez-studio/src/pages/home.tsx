@@ -92,10 +92,10 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-muted-foreground text-lg font-light leading-relaxed">
                 <p>
-                  At Beez Studio, we believe architecture is more than creating shelter. It is about crafting environments that elevate the human experience.
+                  Founded in 2007, Beez Studio is a reputed architectural consultancy &amp; construction firm at Dhaka, Bangladesh — with an outstanding reputation for creating the best projects and high-level design and construction services.
                 </p>
                 <p>
-                  Based in Dhaka, our practice spans residential sanctuaries to commercial landmarks. We approach every project with a rigorous commitment to material honesty, spatial clarity, and environmental context.
+                  Our work spans residential, commercial, industrial, landscape and institutional projects. We provide Design &amp; Consultancy and Construction Services across the entire country and abroad. The unique features of our projects ensure a valuable venture.
                 </p>
               </div>
               <Link 
@@ -119,8 +119,8 @@ export default function Home() {
                 className="w-full h-full object-cover object-center rounded-sm"
               />
               <div className="absolute -bottom-8 -left-8 w-48 aspect-square bg-primary p-8 flex flex-col justify-center rounded-sm shadow-2xl hidden md:flex">
-                <span className="font-serif text-5xl font-bold text-primary-foreground mb-2">15+</span>
-                <span className="text-primary-foreground/80 text-sm uppercase tracking-widest">Years of<br/>Excellence</span>
+                <span className="font-serif text-5xl font-bold text-primary-foreground mb-2">Est.</span>
+                <span className="text-primary-foreground/80 text-sm uppercase tracking-widest">Since<br/>2007</span>
               </div>
             </motion.div>
           </div>

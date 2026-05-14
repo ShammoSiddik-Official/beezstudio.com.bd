@@ -70,9 +70,10 @@ export default function Footer() {
           <div>
             <h4 className="font-serif font-semibold text-lg mb-6">Contact</h4>
             <ul className="space-y-4 text-muted-foreground">
-              <li>Dhaka, Bangladesh</li>
-              <li>+880 1234 567 890</li>
-              <li>info@beezstudio.com.bd</li>
+              <li>F-109, H-41/B, R-01<br />Dhanmondi R/A, Dhaka-1205<br />Bangladesh</li>
+              <li>+880 1711 18066</li>
+              <li>support@beezstudio.com.bd</li>
+              <li>www.beezstudio.com.bd</li>
             </ul>
           </div>
         </div>

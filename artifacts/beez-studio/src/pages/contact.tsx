@@ -57,7 +57,7 @@ export default function Contact() {
                   <MapPin className="text-primary mt-1" size={24} />
                   <div>
                     <h4 className="font-serif font-semibold text-xl mb-2 text-foreground">Studio Location</h4>
-                    <p className="text-muted-foreground font-light">Level 5, House 42, Road 11<br />Block F, Banani<br />Dhaka 1213, Bangladesh</p>
+                    <p className="text-muted-foreground font-light">F-109, H-41/B, R-01<br />Dhanmondi R/A<br />Dhaka-1205, Bangladesh</p>
                   </div>
                 </div>
                 
@@ -65,7 +65,7 @@ export default function Contact() {
                   <Phone className="text-primary mt-1" size={24} />
                   <div>
                     <h4 className="font-serif font-semibold text-xl mb-2 text-foreground">Phone</h4>
-                    <p className="text-muted-foreground font-light">+880 1711 223 344<br />+880 2 987 6543</p>
+                    <p className="text-muted-foreground font-light">+880 1711 18066<br />Fax: +880 2 44612330</p>
                   </div>
                 </div>
 
@@ -73,7 +73,7 @@ export default function Contact() {
                   <Mail className="text-primary mt-1" size={24} />
                   <div>
                     <h4 className="font-serif font-semibold text-xl mb-2 text-foreground">Email</h4>
-                    <p className="text-muted-foreground font-light">info@beezstudio.com.bd<br />projects@beezstudio.com.bd</p>
+                    <p className="text-muted-foreground font-light">support@beezstudio.com.bd</p>
                   </div>
                 </div>
               </div>

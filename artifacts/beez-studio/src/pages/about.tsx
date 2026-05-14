@@ -21,7 +21,7 @@ export default function About() {
               Designing spaces that endure.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
-              Founded in 2012 in Dhaka, Beez Studio is an architectural practice dedicated to the intersection of functionality, aesthetic rigor, and environmental context.
+              Founded in 2007 in Dhaka, Beez Studio is an architectural consultancy &amp; construction firm with an outstanding reputation for creating high-level design and construction solutions across Bangladesh and abroad.
             </p>
           </motion.div>
         </div>
@@ -54,13 +54,13 @@ export default function About() {
               <h2 className="font-serif text-4xl font-bold mb-8">Our Philosophy</h2>
               <div className="space-y-6 text-muted-foreground text-lg font-light leading-relaxed">
                 <p>
-                  We believe that architecture is a profound responsibility. A building outlives its creators, shaping the experiences of those who inhabit it for generations.
+                  Beez Studio design team takes over everything — from an idea and concept development to realization — providing a comprehensive range of solutions from Architecture to Interiors &amp; Landscape.
                 </p>
                 <p>
-                  Our design process is deeply rooted in context. We study the light, the landscape, and the local culture to create structures that feel inevitable rather than imposed.
+                  All of our projects are unique, artistic and functional solutions with traditional ethics incorporated into our creation. Our main goal is ensuring our clients' values and individuality through design, making the built environment more sustainable and economical. Because we consider the client as the soul of our project.
                 </p>
                 <p>
-                  Material honesty is our guiding principle. We favor raw concrete, warm timber, and solid stone—materials that age gracefully and express their structural purpose clearly.
+                  By offering facilities and services not provided by other companies, Beez Studio is the obvious choice for high-end residential and commercial design and construction solutions across Bangladesh and abroad.
                 </p>
               </div>
             </motion.div>
