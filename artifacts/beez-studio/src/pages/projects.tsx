@@ -1,98 +1,106 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight, Compass, Ruler, Hammer, Factory, Trees, Building2, MessagesSquare, Wrench } from "lucide-react";
 
-const ALL_PROJECTS = [
-  { id: 1, title: "Gulshan Residence", category: "Residential", img: "/images/project-1.png", aspect: "aspect-[16/9]" },
-  { id: 2, title: "Banani Commerce Tower", category: "Commercial", img: "/images/project-2.png", aspect: "aspect-[3/4]" },
-  { id: 3, title: "The Courtyard House", category: "Interior", img: "/images/project-3.png", aspect: "aspect-[4/3]" },
-  { id: 4, title: "Heritage Brick Revive", category: "Renovation", img: "/images/project-4.png", aspect: "aspect-[16/9]" },
-  { id: 5, title: "Lumina Retail", category: "Commercial", img: "/images/project-5.png", aspect: "aspect-[3/4]" },
-  { id: 6, title: "Skyline Balcony", category: "Residential", img: "/images/project-6.png", aspect: "aspect-[4/3]" },
-  { id: 7, title: "Dhaka Cultural Center", category: "Commercial", img: "/images/project-7.png", aspect: "aspect-[16/9]" },
-  { id: 8, title: "Minimalist Kitchen", category: "Interior", img: "/images/project-8.png", aspect: "aspect-[4/3]" },
+const CATEGORIES = [
+  { slug: "industrial-steel-buildings", name: "Industrial Steel Buildings", img: "/images/project-1.png", desc: "Large-scale structural steel constructions." },
+  { slug: "commercial-buildings", name: "Commercial Buildings", img: "/images/project-2.png", desc: "Modern commercial centers & workspaces." },
+  { slug: "campus-medical", name: "Campus & Medical Projects", img: "/images/project-3.png", desc: "Educational facilities and medical campuses." },
+  { slug: "hospital-projects", name: "Hospital Projects", img: "/images/project-4.png", desc: "State-of-the-art medical and healthcare facilities." },
+  { slug: "religious-projects", name: "Religious Projects", img: "/images/project-5.png", desc: "Sacred spaces and community centers." },
+  { slug: "apartment-buildings", name: "Apartment Buildings", img: "/images/project-6.png", desc: "Multi-family residential complexes." },
+  { slug: "residential-hotel", name: "Residential Hotel", img: "/images/project-7.png", desc: "Hospitality and boutique accommodations." },
+  { slug: "bungalows-cottages", name: "Bungalows & Cottages", img: "/images/project-8.png", desc: "Bespoke private residences." },
+  { slug: "interiors-design", name: "Interiors Design", img: "/images/project-1.png", desc: "Thoughtful interior transformations." },
+  { slug: "landscape-projects", name: "Landscape Projects", img: "/images/project-2.png", desc: "Ecological and recreational open spaces." },
+  { slug: "bridge-projects", name: "Bridge Projects", img: "/images/project-3.png", desc: "Structural engineering infrastructure." },
 ];
 
-const CATEGORIES = ["All", "Residential", "Commercial", "Interior", "Renovation"];
-
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects = activeCategory === "All" 
-    ? ALL_PROJECTS 
-    : ALL_PROJECTS.filter(p => p.category === activeCategory);
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
 
   return (
     <div className="w-full pt-32 pb-24 min-h-screen">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Header */}
+        {/* 2.1 Projects Category List */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-3xl mb-16"
         >
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">Our Portfolio</h1>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">Our Projects</h1>
           <p className="text-xl text-muted-foreground font-light leading-relaxed">
-            A selection of architectural, interior, and renovation projects showcasing our commitment to spatial clarity and material integrity.
+            Explore our comprehensive portfolio across 11 distinct architectural and engineering disciplines.
           </p>
         </motion.div>
 
-        {/* Filters */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="flex flex-wrap gap-4 mb-16"
-        >
-          {CATEGORIES.map(category => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full text-sm tracking-wide uppercase transition-all duration-300 ${
-                activeCategory === category 
-                  ? "bg-foreground text-background" 
-                  : "bg-secondary text-secondary-foreground hover:bg-primary/10 hover:text-primary"
-              }`}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
+          {CATEGORIES.map((cat, idx) => (
+            <motion.div
+              key={cat.slug}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              transition={{ delay: idx * 0.1 }}
+              className="group flex flex-col h-full bg-card border border-border rounded-sm overflow-hidden"
             >
-              {category}
-            </button>
+              <Link href={`/projects/${cat.slug}`} className="flex flex-col h-full">
+                <div className="aspect-[4/3] overflow-hidden bg-secondary">
+                  <img src={cat.img} alt={cat.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="font-serif text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{cat.name}</h3>
+                  <p className="text-muted-foreground font-light mb-6 flex-grow">{cat.desc}</p>
+                  <div className="flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-foreground group-hover:text-primary transition-colors mt-auto">
+                    View Projects <ArrowRight size={16} />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
           ))}
-        </motion.div>
-
-        {/* Masonry-ish Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5, type: "spring" }}
-                key={project.id}
-                className={`group cursor-pointer ${index % 3 === 0 ? "md:col-span-2" : "col-span-1"}`}
-              >
-                <div className={`overflow-hidden rounded-sm mb-6 ${project.aspect} w-full bg-secondary`}>
-                  <img 
-                    src={project.img} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div>
-                  <h3 className="font-serif text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm tracking-widest uppercase">{project.category}</p>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
         </div>
 
-        {filteredProjects.length === 0 && (
-          <div className="py-32 text-center text-muted-foreground font-light text-xl">
-            No projects found for this category.
+        {/* 2.2 Our Broad Expertise */}
+        <div className="mb-32">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12">Our Broad Expertise</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { icon: Compass, title: "Architecture & Planning" },
+              { icon: Ruler, title: "Interior Design" },
+              { icon: Hammer, title: "Construction Management" },
+              { icon: Factory, title: "Industrial Construction" },
+              { icon: Trees, title: "Landscape Design" },
+              { icon: Building2, title: "Structural Engineering" },
+              { icon: MessagesSquare, title: "Project Consultation" },
+              { icon: Wrench, title: "Renovation & Remodeling" },
+            ].map((expertise, i) => (
+              <div key={i} className="flex items-center gap-4 p-6 bg-secondary/50 rounded-sm border border-border">
+                <expertise.icon className="text-primary shrink-0" size={24} />
+                <span className="font-serif text-xl font-medium">{expertise.title}</span>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
+
+        {/* 2.3 Category-wise Featured Photos */}
+        <div>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12">Across Every Category</h2>
+          <div className="flex gap-4 overflow-x-auto pb-8 snap-x">
+            {CATEGORIES.map((cat, i) => (
+              <div key={i} className="aspect-square w-64 shrink-0 overflow-hidden rounded-sm snap-start bg-secondary relative group">
+                <img src={cat.img} alt={cat.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4">
+                  <span className="font-serif font-bold text-lg">{cat.name}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

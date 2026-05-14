@@ -36,119 +36,128 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mb-20"
         >
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">Get in Touch</h1>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl text-muted-foreground font-light leading-relaxed">
-            Whether you have a specific project in mind or simply want to explore possibilities, we welcome the conversation.
+            Reach out to discuss your next architectural, interior, or construction project. We look forward to building together.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Contact Info */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+          
+          {/* Left Column: Contact Info */}
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="space-y-12"
+            className="lg:col-span-5 space-y-12"
           >
-            <div>
-              <h3 className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-6">Contact Details</h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <MapPin className="text-primary mt-1" size={24} />
-                  <div>
-                    <h4 className="font-serif font-semibold text-xl mb-2 text-foreground">Studio Location</h4>
-                    <p className="text-muted-foreground font-light">F-109, H-41/B, R-01<br />Dhanmondi R/A<br />Dhaka-1205, Bangladesh</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <Phone className="text-primary mt-1" size={24} />
-                  <div>
-                    <h4 className="font-serif font-semibold text-xl mb-2 text-foreground">Phone</h4>
-                    <p className="text-muted-foreground font-light">+880 1711 18066<br />Fax: +880 2 44612330</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <Mail className="text-primary mt-1" size={24} />
-                  <div>
-                    <h4 className="font-serif font-semibold text-xl mb-2 text-foreground">Email</h4>
-                    <p className="text-muted-foreground font-light">support@beezstudio.com.bd</p>
-                  </div>
-                </div>
+            {/* 4.1 Our Location */}
+            <div className="flex items-start gap-5">
+              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center shrink-0">
+                <MapPin className="text-primary" size={24} />
+              </div>
+              <div>
+                <h3 className="font-serif font-semibold text-2xl mb-3 text-foreground">Our Location</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  F-109, H-41/B, R-01<br />
+                  Dhanmondi R/A<br />
+                  Dhaka-1205, Bangladesh
+                </p>
+              </div>
+            </div>
+            
+            {/* 4.2 Let's Talk */}
+            <div className="flex items-start gap-5">
+              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center shrink-0">
+                <Phone className="text-primary" size={24} />
+              </div>
+              <div>
+                <h3 className="font-serif font-semibold text-2xl mb-3 text-foreground">Let's Talk</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  +880 1711 18066<br />
+                  Fax: +880 2 44612330
+                </p>
               </div>
             </div>
 
-            <div className="pt-10 border-t border-border">
-              <h3 className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-6">Business Hours</h3>
-              <div className="grid grid-cols-2 gap-4 text-muted-foreground font-light">
-                <div>Sunday - Thursday</div>
-                <div>10:00 AM - 6:00 PM</div>
-                <div>Friday - Saturday</div>
-                <div>Closed</div>
+            {/* 4.3 Email Us */}
+            <div className="flex items-start gap-5">
+              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center shrink-0">
+                <Mail className="text-primary" size={24} />
+              </div>
+              <div>
+                <h3 className="font-serif font-semibold text-2xl mb-3 text-foreground">Email Us</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  <a href="mailto:support@beezstudio.com.bd" className="hover:text-primary transition-colors">support@beezstudio.com.bd</a><br />
+                  <a href="http://www.beezstudio.com.bd" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">www.beezstudio.com.bd</a>
+                </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Right Column: Direct Message Box (4.4) */}
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="bg-card border border-border p-8 md:p-12 rounded-sm"
+            className="lg:col-span-7 bg-card border border-border p-8 md:p-12 rounded-sm"
           >
-            <h3 className="font-serif text-3xl font-bold mb-8 text-foreground">Send a Message</h3>
+            <h3 className="font-serif text-3xl font-bold mb-8 text-foreground">Direct Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
+                  <label htmlFor="name" className="text-sm font-medium text-foreground uppercase tracking-widest">Name</label>
                   <input 
                     type="text" 
                     id="name" 
                     required 
                     data-testid="input-name"
-                    className="w-full bg-background border border-border p-3 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
+                    className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
+                  <label htmlFor="email" className="text-sm font-medium text-foreground uppercase tracking-widest">Email</label>
                   <input 
                     type="email" 
                     id="email" 
                     required 
                     data-testid="input-email"
-                    className="w-full bg-background border border-border p-3 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
+                    className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="text-sm font-medium text-foreground uppercase tracking-widest">Phone</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    data-testid="input-phone"
+                    className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="text-sm font-medium text-foreground uppercase tracking-widest">Subject</label>
+                  <input 
+                    type="text" 
+                    id="subject" 
+                    required 
+                    data-testid="input-subject"
+                    className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="projectType" className="text-sm font-medium text-foreground">Project Type</label>
-                <select 
-                  id="projectType" 
-                  required
-                  data-testid="input-project-type"
-                  className="w-full bg-background border border-border p-3 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all text-foreground"
-                >
-                  <option value="" disabled selected>Select a type...</option>
-                  <option value="residential">Residential Architecture</option>
-                  <option value="commercial">Commercial Architecture</option>
-                  <option value="interior">Interior Design</option>
-                  <option value="renovation">Renovation</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-foreground">Project Details</label>
+                <label htmlFor="message" className="text-sm font-medium text-foreground uppercase tracking-widest">Message</label>
                 <textarea 
                   id="message" 
-                  rows={5} 
+                  rows={6} 
                   required
                   data-testid="input-message"
-                  className="w-full bg-background border border-border p-3 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all resize-none"
-                  placeholder="Tell us about your vision, location, and timeline..."
+                  className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all resize-none"
                 ></textarea>
               </div>
 
@@ -156,12 +165,13 @@ export default function Contact() {
                 type="submit" 
                 disabled={isSubmitting}
                 data-testid="button-submit"
-                className="w-full py-4 bg-foreground text-background hover:bg-primary transition-colors duration-300 rounded-sm font-medium tracking-widest uppercase text-sm disabled:opacity-70 flex justify-center items-center"
+                className="w-full py-4 bg-foreground text-background hover:bg-primary transition-colors duration-300 rounded-sm font-bold tracking-widest uppercase text-sm disabled:opacity-70 flex justify-center items-center mt-4"
               >
                 {isSubmitting ? "Sending..." : "Submit Inquiry"}
               </button>
             </form>
           </motion.div>
+
         </div>
       </div>
     </div>
