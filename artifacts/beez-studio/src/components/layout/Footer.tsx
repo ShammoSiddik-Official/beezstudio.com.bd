@@ -9,9 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <div className="font-serif font-bold text-2xl tracking-widest">
-                BEEZ <span className="font-light">STUDIO</span>
-              </div>
+              <img
+                src="/beez-studio-logo.png"
+                alt="Beez Studio"
+                className="h-14 w-auto brightness-0"
+              />
             </Link>
             <p className="text-muted-foreground max-w-xs leading-relaxed mb-6">
               Where architecture becomes art. Precision, intention, and beauty in every line.

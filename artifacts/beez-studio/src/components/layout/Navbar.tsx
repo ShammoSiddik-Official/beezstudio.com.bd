@@ -38,9 +38,13 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link href="/" className="group" data-testid="nav-logo">
-          <div className="font-serif font-bold text-2xl tracking-widest text-foreground group-hover:text-primary transition-colors">
-            BEEZ <span className="font-light">STUDIO</span>
-          </div>
+          <img
+            src="/beez-studio-logo.png"
+            alt="Beez Studio"
+            className={`h-12 w-auto transition-all duration-300 ${
+              isScrolled || mobileMenuOpen ? "brightness-0" : "brightness-0 invert"
+            }`}
+          />
         </Link>
 
         {/* Desktop Nav */}
