@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "570dRmzxGdX4s0LBC8KIR"
+uri = "file://artifacts/beez-studio/public/images/project-1.png"
+type = "image"
+title = "Modern luxury villa exterior"
+
+[[generated]]
+id = "fipjekjtzLDPeOP0y9km7"
+uri = "file://artifacts/beez-studio/public/images/project-2.png"
+type = "image"
+title = "Commercial office tower facade"
+
+[[generated]]
+id = "6mN6XiyES-xAGM3fBAB-C"
+uri = "file://artifacts/beez-studio/public/images/project-3.png"
+type = "image"
+title = "Minimalist interior living room"
+
+[[generated]]
+id = "S9c9XU_EIrxavZoTYY9X_"
+uri = "file://artifacts/beez-studio/public/images/project-4.png"
+type = "image"
+title = "Renovated brick building"
+
+[[generated]]
+id = "p2ADak2CdJD0feonAjQDN"
+uri = "file://artifacts/beez-studio/public/images/project-5.png"
+type = "image"
+title = "High end retail interior"
+
+[[generated]]
+id = "PM6NCqX-WUHEwn-qTp7mL"
+uri = "file://artifacts/beez-studio/public/images/project-6.png"
+type = "image"
+title = "Luxury apartment balcony"
+
+[[generated]]
+id = "Y1IUm8pRI5rKCdXs2766J"
+uri = "file://artifacts/beez-studio/public/images/project-7.png"
+type = "image"
+title = "Cultural center exterior"
+
+[[generated]]
+id = "QDP8dkyHc0rz1f5i-2M_p"
+uri = "file://artifacts/beez-studio/public/images/project-8.png"
+type = "image"
+title = "Modern luxury kitchen"
+
+[[generated]]
+id = "1XLu7t0hqBjECX_BgS-hG"
+uri = "file://artifacts/beez-studio/public/images/hero-bg.png"
+type = "image"
+title = "Hero abstract architecture"
+
+[[generated]]
+id = "B7i7pwli5022UM9lH0VPm"
+uri = "file://artifacts/beez-studio/public/images/team-1.png"
+type = "image"
+title = "Architect male portrait"
