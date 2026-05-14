@@ -102,12 +102,12 @@ export default function Contact() {
             variants={fadeInUp}
             className="lg:col-span-7 bg-card border border-border p-8 md:p-12 rounded-sm"
           >
-            <h3 className="font-serif text-3xl font-bold mb-8 text-foreground">Direct Message</h3>
+            <h3 className="font-serif text-3xl font-bold mb-8 text-foreground">Send a Direct Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-foreground uppercase tracking-widest">Name</label>
+                  <label htmlFor="name" className="text-sm font-medium text-foreground uppercase tracking-widest">Full Name</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -117,7 +117,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-foreground uppercase tracking-widest">Email</label>
+                  <label htmlFor="email" className="text-sm font-medium text-foreground uppercase tracking-widest">Email Address</label>
                   <input 
                     type="email" 
                     id="email" 
@@ -130,7 +130,7 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium text-foreground uppercase tracking-widest">Phone</label>
+                  <label htmlFor="phone" className="text-sm font-medium text-foreground uppercase tracking-widest">Phone Number</label>
                   <input 
                     type="tel" 
                     id="phone" 
@@ -151,7 +151,7 @@ export default function Contact() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-foreground uppercase tracking-widest">Message</label>
+                <label htmlFor="message" className="text-sm font-medium text-foreground uppercase tracking-widest">Your Message</label>
                 <textarea 
                   id="message" 
                   rows={6} 
@@ -167,7 +167,7 @@ export default function Contact() {
                 data-testid="button-submit"
                 className="w-full py-4 bg-foreground text-background hover:bg-primary transition-colors duration-300 rounded-sm font-bold tracking-widest uppercase text-sm disabled:opacity-70 flex justify-center items-center mt-4"
               >
-                {isSubmitting ? "Sending..." : "Submit Inquiry"}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </motion.div>

@@ -21,12 +21,18 @@ export default function About() {
             <h1 className="font-serif text-5xl md:text-7xl font-bold mb-8 leading-tight">
               The BeeZ Legacy
             </h1>
+            <blockquote className="font-serif text-3xl italic text-primary mb-10 leading-relaxed max-w-3xl">
+              "We consider the client as the soul of every project we undertake."
+            </blockquote>
             <div className="space-y-6 text-xl text-muted-foreground font-light leading-relaxed mb-10">
               <p>
-                Beez Studio was founded in 2007 as an architectural consultancy & construction firm at Dhaka, Bangladesh. With an outstanding reputation by creating the best projects and high-level design and construction services for projects including residential, commercial, industrial, landscape and institutional projects. We provide Design & Consultancy/Construction Services in the entire country and abroad. The unique features of our projects ensure a valuable venture.
+                Beez Studio was established in 2007 with a singular conviction: that great architecture changes how people experience their world. From our studio in Dhanmondi, Dhaka, we have built a practice spanning architectural consultancy, interior design, construction management, and landscape — serving clients across Bangladesh and internationally.
               </p>
               <p>
-                Beez Studio design team takes over everything — from an idea and concept development to realization — providing a comprehensive range of solutions from Architecture to Interiors & Landscape. All of our projects are unique, artistic and functional solutions with traditional ethics to incorporate into our creation. Our main goal is ensuring our clients' values and individuality through design to make the built environment more sustainable and economical. Because we consider the client as the soul of our project.
+                Our design process begins with listening. Understanding the client's values, lifestyle, and ambitions before a single line is drawn. From that foundation, our team develops concepts that are unique, artistic, and functional — rooted in traditional craft ethics while embracing modern technology and sustainable practice.
+              </p>
+              <p>
+                Beez Studio promotes healthy lifestyles and integrates new technologies to complement current practices in creating greener structures — using energy and water more judiciously, and land and materials more creatively, reducing waste and pollution in all its forms.
               </p>
             </div>
             
@@ -92,7 +98,7 @@ export default function About() {
             >
               <h3 className="font-serif text-3xl font-bold mb-6 text-primary">Our Mission</h3>
               <p className="text-muted-foreground text-lg font-light leading-relaxed">
-                To create sustainable, functional and aesthetically superior built environments that reflect our clients' values and serve communities across Bangladesh and beyond.
+                To create sustainable, functional, and aesthetically superior built environments that reflect our clients' values — and to serve the communities of Bangladesh with design that endures.
               </p>
             </motion.div>
             <motion.div 
@@ -101,7 +107,7 @@ export default function About() {
             >
               <h3 className="font-serif text-3xl font-bold mb-6 text-primary">Our Vision</h3>
               <p className="text-muted-foreground text-lg font-light leading-relaxed">
-                To be the leading architectural consultancy and construction firm in Bangladesh, recognized for design excellence, innovation, and an unwavering commitment to quality.
+                To be the definitive architectural consultancy and construction firm in Bangladesh — renowned for design excellence, innovative construction, and an unwavering commitment to our clients.
               </p>
             </motion.div>
           </div>
@@ -116,13 +122,13 @@ export default function About() {
               CEO Photo
             </div>
             <div>
-              <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">C.E.O.</span>
+              <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Chief Executive Officer</span>
               <h3 className="font-serif text-4xl font-bold mb-8">Md. Harun-or-Rashid</h3>
               <blockquote className="font-serif text-2xl italic text-muted-foreground mb-8 border-l-4 border-primary pl-6 py-2">
-                "Our commitment is to build spaces that endure — in structure, in beauty, and in the lives of those who inhabit them."
+                "Every structure we build carries our signature — not just in its form, but in the lives it shapes and the communities it serves."
               </blockquote>
               <p className="text-muted-foreground font-light leading-relaxed">
-                Guiding Beez Studio since its inception, his vision forms the cornerstone of the firm's approach to architectural integrity and sustainable growth across the nation.
+                With over two decades of experience in architectural design and construction management, he leads Beez Studio's vision and strategic direction, ensuring every project reflects the firm's commitment to quality and innovation.
               </p>
             </div>
           </div>
@@ -140,10 +146,10 @@ export default function About() {
               <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Managing Partner</span>
               <h3 className="font-serif text-4xl font-bold mb-8">[Name]</h3>
               <blockquote className="font-serif text-2xl italic text-muted-foreground mb-8 border-l-4 border-primary pl-6 py-2">
-                "A successful project balances ambitious design with pragmatic execution and uncompromising operational excellence."
+                "Architecture is not about buildings — it is about the people who will inhabit them, long after we have moved on to the next project."
               </blockquote>
               <p className="text-muted-foreground font-light leading-relaxed">
-                Overseeing operations and client relations, ensuring that every project is delivered to the highest standard, on time, and aligned with client expectations.
+                Overseeing operations, client relations, and project delivery across all of Beez Studio's active engagements.
               </p>
             </div>
           </div>
@@ -161,10 +167,10 @@ export default function About() {
               <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Chief Architect & Studio Incharge</span>
               <h3 className="font-serif text-4xl font-bold mb-8">[Name]</h3>
               <blockquote className="font-serif text-2xl italic text-muted-foreground mb-8 border-l-4 border-primary pl-6 py-2">
-                "Design is the silent ambassador of a brand and the living context of a community."
+                "The most important drawing is the first one — where intuition meets intention."
               </blockquote>
               <p className="text-muted-foreground font-light leading-relaxed">
-                Leading the creative direction of the studio, blending modern aesthetics with traditional sensibilities to shape spaces that inspire.
+                Leading Beez Studio's design direction and studio operations, bringing rigorous architectural thinking to every project from concept to completion.
               </p>
             </div>
           </div>
@@ -182,17 +188,17 @@ export default function About() {
             className="mb-16 text-center"
           >
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Our Crew</h2>
-            <p className="text-xl text-muted-foreground font-light">The dedicated professionals bringing visions to reality.</p>
+            <p className="text-xl text-muted-foreground font-light">The specialists behind every line, every material decision, and every project delivered on time.</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {[
-              "Architect",
-              "Interior Designer",
+              "Senior Architect",
+              "Interior Design Lead",
               "Structural Engineer",
               "Project Manager",
               "Site Supervisor",
-              "CAD Specialist",
+              "CAD & BIM Specialist",
               "Quantity Surveyor",
               "Landscape Designer"
             ].map((role, i) => (

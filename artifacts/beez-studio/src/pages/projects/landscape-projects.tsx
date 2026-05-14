@@ -15,7 +15,7 @@ export default function LandscapeProjects() {
   return (
     <ProjectCategory 
       categoryName="Landscape Projects" 
-      description="Ecological and recreational open spaces integrating natural ecosystems with functional public realm design."
+      description="Outdoor environments that extend architecture into the natural world — green spaces, public realms, and gardens designed for people."
       projects={projects}
     />
   );

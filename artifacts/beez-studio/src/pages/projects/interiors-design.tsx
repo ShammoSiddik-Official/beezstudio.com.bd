@@ -15,7 +15,7 @@ export default function InteriorsDesign() {
   return (
     <ProjectCategory 
       categoryName="Interiors Design" 
-      description="Thoughtful interior transformations that elevate spatial experience through meticulous material selection and layout."
+      description="Interior environments crafted to complement the architecture — material-honest, spatially considered, and unmistakably refined."
       projects={projects}
     />
   );

@@ -19,7 +19,7 @@ export default function IndustrialSteelBuildings() {
   return (
     <ProjectCategory 
       categoryName="Industrial Steel Buildings" 
-      description="Large-scale structural steel constructions tailored for manufacturing, warehousing, and complex industrial operations with a focus on durability and efficiency."
+      description="Engineered for performance, designed with purpose. Our industrial steel structures combine structural integrity with architectural consideration — delivering facilities built to last."
       projects={projects}
     />
   );

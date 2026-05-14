@@ -15,7 +15,7 @@ export default function ReligiousProjects() {
   return (
     <ProjectCategory 
       categoryName="Religious Projects" 
-      description="Sacred spaces reflecting spiritual heritage, community values, and architectural serenity."
+      description="Sacred spaces demand the highest architectural respect. Our religious projects honor tradition, community, and the spiritual significance of every detail."
       projects={projects}
     />
   );

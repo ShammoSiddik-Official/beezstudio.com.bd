@@ -15,7 +15,7 @@ export default function CommercialBuildings() {
   return (
     <ProjectCategory 
       categoryName="Commercial Buildings" 
-      description="Modern commercial centers designed to foster productivity, collaboration, and represent corporate identity through innovative architectural forms."
+      description="From corporate headquarters to mixed-use developments, our commercial portfolio reflects the ambitions of Bangladesh's growing business landscape."
       projects={projects}
     />
   );

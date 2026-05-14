@@ -48,7 +48,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 font-light tracking-wide"
           >
-            Consulting, design, and construction across Bangladesh since 2007.
+            Transforming visions into landmark structures across Bangladesh since 2007. Architecture. Interiors. Construction.
           </motion.p>
           
           <motion.div
@@ -61,7 +61,7 @@ export default function Home() {
               data-testid="hero-cta"
               className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background hover:bg-primary transition-colors duration-300 rounded-sm font-medium tracking-widest uppercase text-sm"
             >
-              Explore Our Work <ArrowRight size={18} />
+              Explore Our Portfolio <ArrowRight size={18} />
             </Link>
           </motion.div>
         </div>
@@ -87,7 +87,10 @@ export default function Home() {
             variants={fadeInUp}
             className="mb-16"
           >
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">Selected Works</h2>
+            <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
+              A cross-section of our portfolio spanning industrial structures, bespoke residences, and civic institutions.
+            </p>
           </motion.div>
 
           <motion.div 
@@ -134,12 +137,15 @@ export default function Home() {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex justify-between items-end mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold">Industrial Projects</h2>
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-3">Industrial Excellence</h2>
+              <p className="text-muted-foreground font-light max-w-xl">Purpose-built steel structures engineered for operational efficiency without sacrificing architectural integrity.</p>
+            </div>
             <Link 
               href="/projects/industrial-steel-buildings" 
-              className="inline-flex items-center gap-2 text-primary font-medium tracking-widest uppercase text-sm hover:text-foreground transition-colors group"
+              className="inline-flex items-center gap-2 text-primary font-medium tracking-widest uppercase text-sm hover:text-foreground transition-colors group whitespace-nowrap"
             >
-              View All <span className="hidden sm:inline">Industrial Projects</span> <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              View Industrial Portfolio <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -162,12 +168,15 @@ export default function Home() {
       <section className="py-24 bg-card">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex justify-between items-end mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold">Interiors Projects</h2>
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-3">Spaces Within Spaces</h2>
+              <p className="text-muted-foreground font-light max-w-xl">Interior environments designed to complement the architecture — harmonious, functional, and unmistakably considered.</p>
+            </div>
             <Link 
               href="/projects/interiors-design" 
-              className="inline-flex items-center gap-2 text-primary font-medium tracking-widest uppercase text-sm hover:text-foreground transition-colors group"
+              className="inline-flex items-center gap-2 text-primary font-medium tracking-widest uppercase text-sm hover:text-foreground transition-colors group whitespace-nowrap"
             >
-              View All <span className="hidden sm:inline">Interiors Projects</span> <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              View Interiors Portfolio <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -197,18 +206,21 @@ export default function Home() {
               variants={fadeInUp}
             >
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8">
-                About Beez Studio
+                Precision in Every Line. Purpose in Every Space.
               </h2>
               <div className="space-y-6 text-muted-foreground text-lg font-light leading-relaxed mb-10">
                 <p>
-                  Beez Studio was founded in 2007 as an architectural consultancy & construction firm at Dhaka, Bangladesh. With an outstanding reputation by creating the best projects and high-level design and construction services for projects including residential, commercial, industrial, landscape and institutional projects.
+                  At Beez Studio, we have spent over 17 years shaping the built environment of Bangladesh. From the first concept sketch to the final handover, we bring uncompromising standards to every residential, commercial, industrial, and institutional project we undertake.
+                </p>
+                <p>
+                  Our multidisciplinary team operates at the intersection of architecture, interior design, and construction management — delivering end-to-end solutions that are as functional as they are beautiful. We do not build buildings. We create environments that people remember.
                 </p>
               </div>
               <Link 
                 href="/about" 
                 className="inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background hover:bg-primary transition-colors duration-300 rounded-sm font-medium tracking-widest uppercase text-sm"
               >
-                Read More <ArrowRight size={18} />
+                Our Story <ArrowRight size={18} />
               </Link>
             </motion.div>
             

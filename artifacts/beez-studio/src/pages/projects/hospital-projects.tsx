@@ -15,7 +15,7 @@ export default function HospitalProjects() {
   return (
     <ProjectCategory 
       categoryName="Hospital Projects" 
-      description="State-of-the-art medical facilities combining strict regulatory compliance with patient-centric healing environments."
+      description="Precision-planned medical facilities that meet international standards while remaining responsive to the specific needs of patients, staff, and visitors."
       projects={projects}
     />
   );

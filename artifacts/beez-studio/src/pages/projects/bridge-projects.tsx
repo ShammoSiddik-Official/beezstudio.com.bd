@@ -15,7 +15,7 @@ export default function BridgeProjects() {
   return (
     <ProjectCategory 
       categoryName="Bridge Projects" 
-      description="Structural engineering marvels connecting communities and supporting vital infrastructure networks."
+      description="Infrastructure with architectural ambition. Our bridge and civil projects combine engineering precision with design sensibility."
       projects={projects}
     />
   );

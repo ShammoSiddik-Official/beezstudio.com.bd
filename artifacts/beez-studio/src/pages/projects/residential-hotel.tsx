@@ -15,7 +15,7 @@ export default function ResidentialHotel() {
   return (
     <ProjectCategory 
       categoryName="Residential Hotel" 
-      description="Hospitality architecture blending comfort, luxury, and cultural authenticity to provide memorable guest experiences."
+      description="Hospitality architecture that delivers comfort, efficiency, and an experience worth returning to."
       projects={projects}
     />
   );

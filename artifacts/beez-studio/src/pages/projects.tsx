@@ -34,7 +34,7 @@ export default function Projects() {
         >
           <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">Our Projects</h1>
           <p className="text-xl text-muted-foreground font-light leading-relaxed">
-            Explore our comprehensive portfolio across 11 distinct architectural and engineering disciplines.
+            Seventeen years of landmark work across 11 disciplines. Every category represents a distinct domain of expertise.
           </p>
         </motion.div>
 
@@ -49,11 +49,14 @@ export default function Projects() {
               transition={{ delay: idx * 0.1 }}
               className="group flex flex-col h-full bg-card border border-border rounded-sm overflow-hidden"
             >
-              <Link href={`/projects/${cat.slug}`} className="flex flex-col h-full">
-                <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                  <img src={cat.img} alt={cat.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Link href={`/projects/${cat.slug}`} className="flex flex-col h-full relative">
+                <div className="aspect-[4/3] overflow-hidden bg-secondary relative">
+                  <img src={cat.img} alt={cat.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.08]" />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-6 text-center z-10">
+                     <span className="font-serif text-3xl text-white font-bold">{cat.name}</span>
+                  </div>
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6 flex flex-col flex-grow relative z-20 bg-card">
                   <h3 className="font-serif text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{cat.name}</h3>
                   <p className="text-muted-foreground font-light mb-6 flex-grow">{cat.desc}</p>
                   <div className="flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-foreground group-hover:text-primary transition-colors mt-auto">
@@ -67,7 +70,7 @@ export default function Projects() {
 
         {/* 2.2 Our Broad Expertise */}
         <div className="mb-32">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12">Our Broad Expertise</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12">Disciplines We Master</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { icon: Compass, title: "Architecture & Planning" },
@@ -79,7 +82,7 @@ export default function Projects() {
               { icon: MessagesSquare, title: "Project Consultation" },
               { icon: Wrench, title: "Renovation & Remodeling" },
             ].map((expertise, i) => (
-              <div key={i} className="flex items-center gap-4 p-6 bg-secondary/50 rounded-sm border border-border">
+              <div key={i} className="flex items-center gap-4 p-6 bg-secondary/50 rounded-sm border-y border-r border-border border-l-2 border-l-primary hover:bg-secondary transition-colors">
                 <expertise.icon className="text-primary shrink-0" size={24} />
                 <span className="font-serif text-xl font-medium">{expertise.title}</span>
               </div>
@@ -89,7 +92,7 @@ export default function Projects() {
 
         {/* 2.3 Category-wise Featured Photos */}
         <div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12">Across Every Category</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12">Work That Defines Categories</h2>
           <div className="flex gap-4 overflow-x-auto pb-8 snap-x">
             {CATEGORIES.map((cat, i) => (
               <div key={i} className="aspect-square w-64 shrink-0 overflow-hidden rounded-sm snap-start bg-secondary relative group">

@@ -12,11 +12,11 @@ export default function Footer() {
               <img
                 src="/beez-studio-logo.png"
                 alt="Beez Studio"
-                className="h-14 w-auto brightness-0"
+                className="h-14 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-muted-foreground max-w-xs leading-relaxed mb-6">
-              Where architecture becomes art. Precision, intention, and beauty in every line.
+              Building Bangladesh's future, one landmark at a time. Since 2007.
             </p>
             <div className="flex items-center gap-4 text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors" aria-label="Facebook">
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Beez Studio. All rights reserved.</p>
+          <p>&copy; 2026 BeeZ Studio. Architectural Consultancy & Construction. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>

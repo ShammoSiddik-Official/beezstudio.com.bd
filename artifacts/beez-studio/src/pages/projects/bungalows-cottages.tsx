@@ -14,8 +14,8 @@ export default function BungalowsCottages() {
 
   return (
     <ProjectCategory 
-      categoryName="Bungalows & Family Cottages" 
-      description="Bespoke private residences harmonizing with natural surroundings, offering tranquil retreats for modern families."
+      categoryName="Bungalows & Cottages" 
+      description="Private residences designed around how families actually live — intimate, functional, and deeply personal."
       projects={projects}
     />
   );

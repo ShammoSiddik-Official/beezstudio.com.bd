@@ -15,7 +15,7 @@ export default function ApartmentBuildings() {
   return (
     <ProjectCategory 
       categoryName="Apartment Buildings" 
-      description="Multi-family residential complexes focusing on sustainable urban living, optimal space utilization, and community amenities."
+      description="Multi-family residential architecture that balances density with livability — creating communities, not just units."
       projects={projects}
     />
   );

@@ -32,7 +32,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? "bg-background/95 backdrop-blur-md border-b border-border py-4"
+          ? "bg-black/90 backdrop-blur-md border-b border-white/10 py-4"
           : "bg-transparent py-6"
       }`}
     >
@@ -42,7 +42,7 @@ export default function Navbar() {
             src="/beez-studio-logo.png"
             alt="Beez Studio"
             className={`h-12 w-auto transition-all duration-300 ${
-              isScrolled || mobileMenuOpen ? "brightness-0" : "brightness-0 invert"
+              isScrolled || mobileMenuOpen ? "brightness-0 invert" : "brightness-0 invert"
             }`}
           />
         </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
               href={link.href}
               data-testid={`nav-link-${link.label.toLowerCase()}`}
               className={`text-sm tracking-wide uppercase transition-colors hover:text-primary ${
-                location === link.href ? "text-primary font-medium" : "text-muted-foreground"
+                location === link.href ? "text-primary font-medium" : "text-white/70"
               }`}
             >
               {link.label}

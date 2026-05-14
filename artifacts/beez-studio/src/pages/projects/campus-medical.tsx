@@ -15,7 +15,7 @@ export default function CampusMedical() {
   return (
     <ProjectCategory 
       categoryName="Campus & Medical Projects" 
-      description="Comprehensive institutional master planning and educational facilities that support learning, research, and healthcare delivery."
+      description="Educational and healthcare environments require sensitivity to their users. We design campus and medical facilities that support learning, healing, and community."
       projects={projects}
     />
   );
