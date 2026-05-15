@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Compass, Ruler, Hammer, Factory, Trees, Building2, MessagesSquare, Wrench } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const CATEGORIES = [
   { slug: "industrial-steel-buildings", name: "Industrial Steel Buildings", img: "/images/project-1.png", desc: "Pre-engineered steel structures for factories, warehouses, and processing plants across Bangladesh.", count: 8 },
@@ -73,35 +73,7 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* 2.2 Our Broad Expertise */}
-        <div className="mb-32">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12">Disciplines We Master</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { icon: Compass, title: "Architecture & Planning" },
-              { icon: Building2, title: "Apartments & Residences" },
-              { icon: Ruler, title: "Interior Design" },
-              { icon: Hammer, title: "Construction Management" },
-              { icon: Factory, title: "Industrial Construction" },
-              { icon: Trees, title: "Landscape Design" },
-              { icon: MessagesSquare, title: "Campus & Institutional" },
-              { icon: Wrench, title: "Religious Architecture" },
-              { icon: Building2, title: "Hotels & Resorts" },
-              { icon: Factory, title: "Corporate Buildings" },
-              { icon: Trees, title: "Tourism Development" },
-              { icon: Compass, title: "Bridge & Infrastructure" },
-              { icon: Ruler, title: "Project & Construction Management" },
-              { icon: Hammer, title: "Monuments & Sculpture" },
-            ].map((expertise, i) => (
-              <div key={i} className="flex items-center gap-4 p-6 bg-secondary/50 rounded-sm border-y border-r border-border border-l-2 border-l-primary hover:bg-secondary transition-colors">
-                <expertise.icon className="text-primary shrink-0" size={24} />
-                <span className="font-serif text-xl font-medium">{expertise.title}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 2.3 Category-wise Featured Photos */}
+        {/* 2.2 Category-wise Featured Photos */}
         <div>
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12">Work That Defines Categories</h2>
           <div className="flex gap-4 overflow-x-auto pb-8 snap-x">

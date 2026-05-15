@@ -11,6 +11,13 @@ import {
   ArrowRight,
   CheckCircle2,
   Landmark,
+  Ruler,
+  Hammer,
+  MessagesSquare,
+  Wrench,
+  Hotel,
+  Leaf,
+  Pickaxe,
 } from "lucide-react";
 
 const SERVICES = [
@@ -266,6 +273,127 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Disciplines We Master */}
+      <section className="py-24 md:py-32 bg-card border-y border-border">
+        <div className="container mx-auto px-6 md:px-12">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="mb-16"
+          >
+            <span className="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">
+              Full Scope
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+              Disciplines We Master
+            </h2>
+            <p className="text-muted-foreground font-light text-lg max-w-xl">
+              Our expertise spans the full spectrum of the built environment — from individual homes to infrastructure at a national scale.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          >
+            {[
+              {
+                icon: Compass,
+                title: "Architecture & Planning",
+                desc: "Comprehensive design from concept through construction documents, covering every building type and scale.",
+              },
+              {
+                icon: Building2,
+                title: "Apartments & Residences",
+                desc: "Multi-storey residential blocks and private homes designed around how families actually live.",
+              },
+              {
+                icon: Ruler,
+                title: "Interior Design",
+                desc: "Spatial environments shaped by material honesty, lighting intelligence, and deep understanding of use.",
+              },
+              {
+                icon: HardHat,
+                title: "Construction Management",
+                desc: "End-to-end site oversight ensuring quality, schedule, and budget are delivered without compromise.",
+              },
+              {
+                icon: Factory,
+                title: "Industrial Construction",
+                desc: "Pre-engineered steel structures and factory facilities built for operational efficiency and durability.",
+              },
+              {
+                icon: Trees,
+                title: "Landscape Design",
+                desc: "Gardens, plazas, resort grounds, and ecological open spaces designed as natural extensions of architecture.",
+              },
+              {
+                icon: MessagesSquare,
+                title: "Campus & Institutional",
+                desc: "University, school, and medical campuses designed to support learning, healing, and long-term community.",
+              },
+              {
+                icon: Landmark,
+                title: "Religious Architecture",
+                desc: "Mosques and sacred spaces built with reverence for tradition, acoustic precision, and community need.",
+              },
+              {
+                icon: Hotel,
+                title: "Hotels & Resorts",
+                desc: "Hospitality environments that balance guest comfort, operational efficiency, and architectural distinctiveness.",
+              },
+              {
+                icon: Wrench,
+                title: "Corporate Buildings",
+                desc: "Office towers, commercial centres, and mixed-use developments serving Bangladesh's business landscape.",
+              },
+              {
+                icon: Leaf,
+                title: "Tourism Development",
+                desc: "Eco-resorts, riverside retreats, and tourism facilities that integrate sensitively with their natural setting.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Bridge & Infrastructure",
+                desc: "Structural bridges and civic infrastructure combining engineering rigour with architectural sensibility.",
+              },
+              {
+                icon: Pickaxe,
+                title: "Project & Construction Management",
+                desc: "Full programme management for large, complex builds — coordinating design, contractors, and compliance.",
+              },
+              {
+                icon: Hammer,
+                title: "Monuments & Sculpture",
+                desc: "Commemorative installations and public sculptures that define the character of civic and institutional spaces.",
+              },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={i}
+                  variants={fadeInUp}
+                  className="flex gap-5 p-6 bg-background rounded-sm border-y border-r border-border border-l-2 border-l-primary hover:bg-secondary/30 transition-colors"
+                >
+                  <div className="w-10 h-10 bg-primary/10 rounded-sm flex items-center justify-center shrink-0 mt-0.5">
+                    <Icon size={18} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-lg font-bold mb-1">{item.title}</h3>
+                    <p className="text-muted-foreground font-light text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </motion.div>
               );
             })}
