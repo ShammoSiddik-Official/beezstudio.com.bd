@@ -89,6 +89,7 @@ export default function Contact() {
                 <h3 className="font-serif font-semibold text-2xl mb-3 text-foreground">Email Us</h3>
                 <p className="text-muted-foreground font-light leading-relaxed">
                   <a href="mailto:support@beezstudio.com.bd" className="hover:text-primary transition-colors">support@beezstudio.com.bd</a><br />
+                  <a href="mailto:info.beezstudio@gmail.com" className="hover:text-primary transition-colors">info.beezstudio@gmail.com</a><br />
                   <a href="http://www.beezstudio.com.bd" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">www.beezstudio.com.bd</a>
                 </p>
               </div>

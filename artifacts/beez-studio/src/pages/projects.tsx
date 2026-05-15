@@ -3,17 +3,17 @@ import { Link } from "wouter";
 import { ArrowRight, Compass, Ruler, Hammer, Factory, Trees, Building2, MessagesSquare, Wrench } from "lucide-react";
 
 const CATEGORIES = [
-  { slug: "industrial-steel-buildings", name: "Industrial Steel Buildings", img: "/images/project-1.png", desc: "Large-scale structural steel constructions." },
-  { slug: "commercial-buildings", name: "Commercial Buildings", img: "/images/project-2.png", desc: "Modern commercial centers & workspaces." },
-  { slug: "campus-medical", name: "Campus & Medical Projects", img: "/images/project-3.png", desc: "Educational facilities and medical campuses." },
-  { slug: "hospital-projects", name: "Hospital Projects", img: "/images/project-4.png", desc: "State-of-the-art medical and healthcare facilities." },
-  { slug: "religious-projects", name: "Religious Projects", img: "/images/project-5.png", desc: "Sacred spaces and community centers." },
-  { slug: "apartment-buildings", name: "Apartment Buildings", img: "/images/project-6.png", desc: "Multi-family residential complexes." },
-  { slug: "residential-hotel", name: "Residential Hotel", img: "/images/project-7.png", desc: "Hospitality and boutique accommodations." },
-  { slug: "bungalows-cottages", name: "Bungalows & Cottages", img: "/images/project-8.png", desc: "Bespoke private residences." },
-  { slug: "interiors-design", name: "Interiors Design", img: "/images/project-1.png", desc: "Thoughtful interior transformations." },
-  { slug: "landscape-projects", name: "Landscape Projects", img: "/images/project-2.png", desc: "Ecological and recreational open spaces." },
-  { slug: "bridge-projects", name: "Bridge Projects", img: "/images/project-3.png", desc: "Structural engineering infrastructure." },
+  { slug: "industrial-steel-buildings", name: "Industrial Steel Buildings", img: "/images/project-1.png", desc: "Pre-engineered steel structures for factories, warehouses, and processing plants across Bangladesh.", count: 8 },
+  { slug: "commercial-buildings", name: "Commercial Buildings", img: "/images/project-2.png", desc: "Corporate headquarters, retail centres, and mixed-use developments serving Bangladesh's growing economy.", count: 7 },
+  { slug: "campus-medical", name: "Campus & Medical Projects", img: "/images/project-3.png", desc: "Educational dormitories and medical college facilities designed for learning and healing.", count: 2 },
+  { slug: "hospital-projects", name: "Hospital Projects", img: "/images/project-4.png", desc: "Precision-planned healthcare facilities meeting international standards of care and functionality.", count: 1 },
+  { slug: "religious-projects", name: "Religious Projects", img: "/images/project-5.png", desc: "Mosques and sacred spaces built with reverence for tradition and community.", count: 4 },
+  { slug: "apartment-buildings", name: "Apartment Buildings", img: "/images/project-6.png", desc: "Multi-storey residential blocks from G+6 to G+13, creating communities across Dhaka and beyond.", count: 8 },
+  { slug: "residential-hotel", name: "Residential Hotels", img: "/images/project-7.png", desc: "Hospitality and serviced apartment buildings delivering comfort and operational efficiency.", count: 3 },
+  { slug: "bungalows-cottages", name: "Bungalows & Family Cottages", img: "/images/project-8.png", desc: "Private villas, family residences, and vacation retreats — each as unique as its owner.", count: 8 },
+  { slug: "interiors-design", name: "Interiors Design", img: "/images/project-1.png", desc: "Interior environments for offices, residences, hospitality venues, and institutional buildings.", count: 13 },
+  { slug: "landscape-projects", name: "Landscape Projects", img: "/images/project-2.png", desc: "Resort grounds, school campuses, cantonment gardens, and ecological open spaces.", count: 6 },
+  { slug: "bridge-projects", name: "Bridge Projects", img: "/images/project-3.png", desc: "Structural bridges combining engineering precision with architectural sensibility.", count: 2 },
 ];
 
 export default function Projects() {
@@ -57,7 +57,12 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow relative z-20 bg-card">
-                  <h3 className="font-serif text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{cat.name}</h3>
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <h3 className="font-serif text-2xl font-bold group-hover:text-primary transition-colors">{cat.name}</h3>
+                    <span className="shrink-0 text-xs font-medium tracking-widest uppercase text-primary border border-primary/30 bg-primary/10 px-2 py-1 rounded-sm">
+                      {cat.count} {cat.count === 1 ? "project" : "projects"}
+                    </span>
+                  </div>
                   <p className="text-muted-foreground font-light mb-6 flex-grow">{cat.desc}</p>
                   <div className="flex items-center gap-2 text-sm font-medium tracking-widest uppercase text-foreground group-hover:text-primary transition-colors mt-auto">
                     View Projects <ArrowRight size={16} />
@@ -74,13 +79,19 @@ export default function Projects() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { icon: Compass, title: "Architecture & Planning" },
+              { icon: Building2, title: "Apartments & Residences" },
               { icon: Ruler, title: "Interior Design" },
               { icon: Hammer, title: "Construction Management" },
               { icon: Factory, title: "Industrial Construction" },
               { icon: Trees, title: "Landscape Design" },
-              { icon: Building2, title: "Structural Engineering" },
-              { icon: MessagesSquare, title: "Project Consultation" },
-              { icon: Wrench, title: "Renovation & Remodeling" },
+              { icon: MessagesSquare, title: "Campus & Institutional" },
+              { icon: Wrench, title: "Religious Architecture" },
+              { icon: Building2, title: "Hotels & Resorts" },
+              { icon: Factory, title: "Corporate Buildings" },
+              { icon: Trees, title: "Tourism Development" },
+              { icon: Compass, title: "Bridge & Infrastructure" },
+              { icon: Ruler, title: "Project & Construction Management" },
+              { icon: Hammer, title: "Monuments & Sculpture" },
             ].map((expertise, i) => (
               <div key={i} className="flex items-center gap-4 p-6 bg-secondary/50 rounded-sm border-y border-r border-border border-l-2 border-l-primary hover:bg-secondary transition-colors">
                 <expertise.icon className="text-primary shrink-0" size={24} />

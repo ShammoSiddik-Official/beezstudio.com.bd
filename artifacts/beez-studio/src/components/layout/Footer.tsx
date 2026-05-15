@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { SiFacebook, SiInstagram } from "react-icons/si";
+import { SiFacebook, SiInstagram, SiX } from "react-icons/si";
 import { Linkedin } from "lucide-react";
 
 export default function Footer() {
@@ -19,14 +19,17 @@ export default function Footer() {
               Building Bangladesh's future, one landmark at a time. Since 2007.
             </p>
             <div className="flex items-center gap-4 text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors" aria-label="Facebook">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
                 <SiFacebook size={20} />
               </a>
-              <a href="#" className="hover:text-primary transition-colors" aria-label="Instagram">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram">
                 <SiInstagram size={20} />
               </a>
-              <a href="#" className="hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors" aria-label="X / Twitter">
+                <SiX size={18} />
               </a>
             </div>
           </div>
@@ -45,6 +48,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
                 </Link>
@@ -58,17 +66,24 @@ export default function Footer() {
               <li>Architecture & Planning</li>
               <li>Interior Design</li>
               <li>Construction Management</li>
-              <li>Renovation & Remodeling</li>
+              <li>Industrial Construction</li>
+              <li>Landscape Design</li>
+              <li>Religious Architecture</li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-serif font-semibold text-lg mb-6">Contact</h4>
-            <ul className="space-y-4 text-muted-foreground">
+            <ul className="space-y-4 text-muted-foreground text-sm leading-relaxed">
               <li>F-109, H-41/B, R-01<br />Dhanmondi R/A, Dhaka-1205<br />Bangladesh</li>
-              <li>+880 1711 18066</li>
-              <li>support@beezstudio.com.bd</li>
-              <li>www.beezstudio.com.bd</li>
+              <li>+880 1711 18066<br />Fax: +880 2 44612330</li>
+              <li>
+                <a href="mailto:support@beezstudio.com.bd" className="hover:text-primary transition-colors">support@beezstudio.com.bd</a><br />
+                <a href="mailto:info.beezstudio@gmail.com" className="hover:text-primary transition-colors">info.beezstudio@gmail.com</a>
+              </li>
+              <li>
+                <a href="http://www.beezstudio.com.bd" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">www.beezstudio.com.bd</a>
+              </li>
             </ul>
           </div>
         </div>
