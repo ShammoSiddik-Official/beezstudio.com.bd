@@ -136,15 +136,15 @@ export default function Home() {
               {
                 id: 4,
                 img: "/images/project-4.png",
-                title: "National Heart Institute Annex",
-                category: "Religious Projects",
-                link: "/projects/hospital-projects",
+                title: "Premier Suites Dhanmondi",
+                category: "Residential Hotels",
+                link: "/projects/residential-hotel",
               },
               {
                 id: 5,
                 img: "/images/project-5.png",
                 title: "Al-Amin Jame Mosque",
-                category: "Residential Hotels",
+                category: "Religious Projects",
                 link: "/projects/religious-projects",
               },
               {
