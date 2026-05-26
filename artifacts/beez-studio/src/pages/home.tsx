@@ -114,7 +114,7 @@ export default function Home() {
             {[
               {
                 id: 1,
-                img: "@assets/1_9_-_Photo_1779055743790.jpg",
+                img: "/images/HOME/1_4 - Photo (copy).jpg",
                 title: "Lucerne Cocoa & Chocolate Products",
                 category: "Industrial Steel Buildings",
                 link: "/projects/industrial-steel-buildings",

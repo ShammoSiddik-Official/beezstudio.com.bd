@@ -2,12 +2,6 @@ uploads = []
 outputs = []
 
 [[generated]]
-id = "570dRmzxGdX4s0LBC8KIR"
-uri = "file://artifacts/beez-studio/public/images/project-1.png"
-type = "image"
-title = "Modern luxury villa exterior"
-
-[[generated]]
 id = "fipjekjtzLDPeOP0y9km7"
 uri = "file://artifacts/beez-studio/public/images/project-2.png"
 type = "image"
