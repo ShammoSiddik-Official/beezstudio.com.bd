@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "fipjekjtzLDPeOP0y9km7"
@@ -54,3 +53,9 @@ id = "B7i7pwli5022UM9lH0VPm"
 uri = "file://artifacts/beez-studio/public/images/team-1.png"
 type = "image"
 title = "Architect male portrait"
+
+[[outputs]]
+id = "v0YPM3wdmBJJ8wkdk_-Jc"
+uri = "file://beez-studio.md"
+type = "text"
+title = "Beez Studio — Website Overview"
