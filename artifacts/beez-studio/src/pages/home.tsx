@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
-  const fadeInUp = {
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
@@ -12,7 +12,7 @@ export default function Home() {
     },
   };
 
-  const staggerContainer = {
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,

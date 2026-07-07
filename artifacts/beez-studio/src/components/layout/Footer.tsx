@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { SiFacebook, SiInstagram, SiX } from "react-icons/si";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Code2 } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -88,11 +88,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; 2026 BeeZ Studio. Architectural Consultancy & Construction. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>
+        <div className="pt-8 border-t border-border space-y-3">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+            <p>&copy; 2026 BeeZ Studio. Architectural Consultancy & Construction. All rights reserved.</p>
+            <div className="flex gap-6 mt-4 md:mt-0">
+              <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>
+            </div>
+          </div>
+          {/* Developer Credit */}
+          <div className="flex items-center justify-center gap-2 pt-2 text-xs text-muted-foreground/50">
+            <Code2 size={13} className="text-primary/40" />
+            <span>
+              Designed & developed by{" "}
+              <span className="text-primary/70 font-medium hover:text-primary transition-colors cursor-default">
+                Md. Harun-or-Rashid
+              </span>
+              {" "}— Full Stack Developer & Founder, BeeZ Studio
+            </span>
           </div>
         </div>
       </div>

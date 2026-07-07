@@ -3,23 +3,47 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(`${BASE_URL}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone") || undefined,
+          subject: data.get("subject"),
+          message: data.get("message"),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
       toast({
         title: "Message Sent",
         description: "Thank you for reaching out. We will get back to you shortly.",
       });
-      (e.target as HTMLFormElement).reset();
-    }, 1500);
+      form.reset();
+    } catch {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const fadeInUp = {
@@ -111,7 +135,8 @@ export default function Contact() {
                   <label htmlFor="name" className="text-sm font-medium text-foreground uppercase tracking-widest">Full Name</label>
                   <input 
                     type="text" 
-                    id="name" 
+                    id="name"
+                    name="name"
                     required 
                     data-testid="input-name"
                     className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
@@ -121,7 +146,8 @@ export default function Contact() {
                   <label htmlFor="email" className="text-sm font-medium text-foreground uppercase tracking-widest">Email Address</label>
                   <input 
                     type="email" 
-                    id="email" 
+                    id="email"
+                    name="email"
                     required 
                     data-testid="input-email"
                     className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
@@ -134,7 +160,8 @@ export default function Contact() {
                   <label htmlFor="phone" className="text-sm font-medium text-foreground uppercase tracking-widest">Phone Number</label>
                   <input 
                     type="tel" 
-                    id="phone" 
+                    id="phone"
+                    name="phone"
                     data-testid="input-phone"
                     className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
                   />
@@ -143,7 +170,8 @@ export default function Contact() {
                   <label htmlFor="subject" className="text-sm font-medium text-foreground uppercase tracking-widest">Subject</label>
                   <input 
                     type="text" 
-                    id="subject" 
+                    id="subject"
+                    name="subject"
                     required 
                     data-testid="input-subject"
                     className="w-full bg-background border border-border p-4 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all"
@@ -154,7 +182,8 @@ export default function Contact() {
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium text-foreground uppercase tracking-widest">Your Message</label>
                 <textarea 
-                  id="message" 
+                  id="message"
+                  name="message"
                   rows={6} 
                   required
                   data-testid="input-message"

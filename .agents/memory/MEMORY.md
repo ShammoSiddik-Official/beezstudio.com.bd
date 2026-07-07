@@ -1,0 +1,1 @@
+- [Admin panel & auth setup](admin-panel-auth.md) — JWT auth in API server, 4 seeded users, lib/db declarations must be rebuilt after schema changes

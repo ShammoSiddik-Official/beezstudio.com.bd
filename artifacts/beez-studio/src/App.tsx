@@ -6,6 +6,8 @@ import NotFound from "@/pages/not-found";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ChatBot from "@/components/ChatBot";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 import Home from "@/pages/home";
 import Projects from "@/pages/projects";
@@ -51,18 +53,27 @@ function Router() {
   );
 }
 
+function AppInner() {
+  useSmoothScroll();
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background font-sans text-foreground selection:bg-primary selection:text-primary-foreground">
+      <Navbar />
+      <main className="flex-grow flex flex-col w-full">
+        <Router />
+      </main>
+      <Footer />
+      <ChatBot />
+    </div>
+  );
+}
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <div className="min-h-screen flex flex-col bg-background font-sans text-foreground selection:bg-primary selection:text-primary-foreground">
-            <Navbar />
-            <main className="flex-grow flex flex-col w-full">
-              <Router />
-            </main>
-            <Footer />
-          </div>
+          <AppInner />
         </WouterRouter>
         <Toaster />
       </TooltipProvider>
