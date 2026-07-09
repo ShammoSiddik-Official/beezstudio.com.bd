@@ -64,7 +64,7 @@ export default function SetupPage() {
                 <div>
                   <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2 font-medium">Setup Token</label>
                   <p className="text-xs text-muted-foreground/70 mb-3">
-                    Enter your <code className="bg-muted px-1 py-0.5 rounded text-xs">SESSION_SECRET</code> environment variable to verify you are the server operator.
+                    Enter your server's secret key (e.g. <code className="bg-muted px-1 py-0.5 rounded text-xs">SESSION_SECRET</code> or <code className="bg-muted px-1 py-0.5 rounded text-xs">JWT_SECRET</code>, depending on your setup) to verify you are the server operator.
                   </p>
                   <div className="relative">
                     <KeyRound size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
@@ -75,7 +75,7 @@ export default function SetupPage() {
                       required
                       autoFocus
                       className="w-full bg-background border border-input rounded-sm pl-9 pr-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all font-mono"
-                      placeholder="Paste your SESSION_SECRET"
+                      placeholder="Paste your server's secret key"
                     />
                   </div>
                 </div>
