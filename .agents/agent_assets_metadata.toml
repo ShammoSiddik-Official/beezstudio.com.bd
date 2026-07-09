@@ -59,3 +59,21 @@ id = "v0YPM3wdmBJJ8wkdk_-Jc"
 uri = "file://beez-studio.md"
 type = "text"
 title = "Beez Studio — Website Overview"
+
+[[outputs]]
+id = "MHY-EtQXwhGfmcATZCGDK"
+uri = "file://exports/beez-studio-cpanel-complete.zip"
+type = "unspecified"
+title = "BeeZ Studio — complete cPanel upload package"
+
+[[outputs]]
+id = "cUYHv_56Yr9aAqf8M9nYx"
+uri = "file://exports/beez-studio-console-source.zip"
+type = "unspecified"
+title = "BeeZ Studio Console — source for redesign"
+
+[[outputs]]
+id = "RghAJFLZcCftHNDKCGoYC"
+uri = "file://exports/beez-studio-public-source.zip"
+type = "unspecified"
+title = "BeeZ Studio public site — source code"
