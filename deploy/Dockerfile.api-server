@@ -1,0 +1,25 @@
+# Build context MUST be the repository root (pnpm workspace), e.g.:
+#   docker build -f deploy/Dockerfile.api-server -t beez-api .
+FROM node:24-alpine AS base
+RUN corepack enable
+WORKDIR /app
+
+FROM base AS builder
+COPY pnpm-workspace.yaml pnpm-lock.yaml .npmrc package.json tsconfig.base.json tsconfig.json ./
+COPY lib ./lib
+COPY artifacts/api-server ./artifacts/api-server
+COPY scripts ./scripts
+RUN pnpm install --frozen-lockfile
+RUN pnpm run typecheck:libs
+RUN pnpm --filter @workspace/api-server run build
+
+# esbuild bundles all dependencies into dist/*.mjs, so the runtime image
+# only needs the compiled output — no node_modules required.
+FROM node:24-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+RUN addgroup -S beez && adduser -S beez -G beez
+COPY --from=builder --chown=beez:beez /app/artifacts/api-server/dist ./dist
+USER beez
+EXPOSE 8080
+CMD ["node", "--enable-source-maps", "dist/index.mjs"]
